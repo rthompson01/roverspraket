@@ -10,10 +10,10 @@ function max(a, b){
     var a
     var b
 
-if (a>b){
-		return a
-} else {
-	return b
+    if (a > b) {
+        return a
+    } else {
+return b
 }
 
 console.assert(max(1,3) === 3);
@@ -55,16 +55,17 @@ function isVowel(z){
     // YOUR CODE HERE
    var findVowel = function(f) {
 
-    var vowels = ["a", "e", "i", "o", "u"];
+       var vowels = ["a", "e", "i", "o", "u"];
 
-    	for(var f = 0; f < vowels.length; f++){
-    		if(letter === vowels[f]){
-    			return true;
-    		}
-    	}
-    	return false;
- 	}
-};
+       for (var f = 0; f < vowels.length; f++) {
+           if (letter === vowels[f]) {
+               return true;
+           }
+       }
+       return false;
+   }
+   };
+
 
 console.assert(isVowel(0) === false);
 console.assert(isVowel("B") === false);
@@ -83,16 +84,31 @@ console.assert(isVowel("E") === true);
  * return the string "tothohisos isos fofunon".
  */
 
-/**function rovarspraket(in){
+function rovarspraket(v){
     // YOUR CODE HERE
+
+    var translate = function(v) {
+    var string = v.toLowercase();
+    var vowels = ["a", "e", "i", "o", "u", " "];
+    var w = "";
+    for (x = 0; x < string.length; x++) {
+        var current = string.charAt(x);
+        if (vowels.indexOf(current) != -1)
+            w = (w + current);
+    else
+        w = (w + curent + "o" + current);
 }
+return y;
+}
+}
+
 
 console.assert(rovarspraket("a") === "a")
 console.assert(rovarspraket("b") === "bob")
 console.assert(rovarspraket("cat") === "cocatot")
 console.assert(rovarspraket("javascript") === "jojavovasoscocroripoptot")
 console.assert(rovarspraket(0) === "0")
-*/
+
 /**
  * Part 4
  *
@@ -122,8 +138,8 @@ console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew
 function findLongestWord(sentence){
     // YOUR CODE HERE
 	sentence = sentence.replace(/[;'\-_!]/g, '');
-	sentence = sentence.split(' ');
-	return sentence.reduce ((a, v, i, arr) = a.length < v.length ? v :a); ''    
+sentence = sentence.split(' ');
+return sentence.reduce((a, v, i, arr) = a.length < v.length ? v : a);
 }
 
 console.assert(findLongestWord("book dogs") === "book")
