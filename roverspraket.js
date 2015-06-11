@@ -33,8 +33,13 @@ console.assert(isNaN(max("aaa","bbb")));
 function maxOfThree(a, b, c){
     // YOUR CODE HERE
 
-    var max = Math.max(num1, num2, num3);
- 
+  if { Math.max(a, b, c);
+  return Math.max(a, b, c);
+}
+  if { Math.max(b, c);
+    return Math.max(b, c);
+}
+  if { Math.max();
 }
 
 console.assert(maxOfThree(1,3,2) === 3);
